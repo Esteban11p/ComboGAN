@@ -44,12 +44,19 @@ close2.addEventListener('click', function() {
 const vender = document.getElementById('Vender');
 const theModalV = document.getElementById('modalV-GAN');
 
+const deleteMventas = document.getElementById('deleteMventas');
 
 // modo register
 vender.addEventListener('click', function() {
  
   theModalV.style.display = 'block';
 });
+
+deleteMventas.addEventListener('click', function(){
+  theModalV.style.display = 'none';
+
+});
+
 
 
 
