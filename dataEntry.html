@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Stilos/Style.css" />
+    <link rel="stylesheet" href="Stilos/dataEntry.css" />
+  </head>
+  <body>
+    <header class="menu">
+      <a href="Index.html">
+        <img
+          id="logo"
+          src="Imagenes/blanco-removebg-preview.png"
+          style="height: 75px"
+        />
+      </a>
+
+      <img
+        id="user"
+        src="Imagenes/User.png"
+        style="height: 55px"
+        title="Register"
+      />
+      <p style="color: white; float: right; margin-right: 20px; margin-top: 60px;">Admin</p>
+    </header>
+
+    <section class="add" id="add">
+      <center>
+        <h1 style="font-size: 30px; color: #3f3b3b">Agregar Hoy</h1>
+      </center>
+
+      <div class="ganado" style="margin-right: 80px" onclick="addGando()">
+        <h2>Ganado</h2>
+      </div>
+
+      <div class="Agricolas" onclick="addProductos()">
+        <h2>Productos Agricolas</h2>
+      </div>
+    </section>
+
+    <section class="add" id="addGanado">
+      <br>
+      <fieldset  style="width: 100%; height: 100%; background-color: white;">
+        <center>
+          <h1 style="font-size: 30px; color: #3f3b3b; margin-right: 20px;">Ganado</h1>
+        </center>
+
+        <form id="formularioGan" action="http://127.0.0.1:5000/guardar_datos" method="POST">
+          <select  id="tb_razas" name="tb_razas" class="inputs" onchange="thecrossing(this.value)" required>
+            <option disabled selected>- Raza del Bovino -</option>
+            <option value="cebú">Cebú</option>
+            <option value="holstein">Holstein</option>
+            <option value="pardo">Pardo Suizo</option>
+            <option value="jersey">Jersey</option>
+            <option value="angus">Angus</option>
+            <option value="gyr">Gyr</option>
+            <option value="simmental">Simmental</option>
+            <option value="cruzado">Cruzado</option>
+          </select>
+          <h3 id="h3cruzado" style="display: none; position: absolute; top: 64px; left: 255px;" >| Razas</h3>
+
+          <input id="inputCruzado" style="display: none; position: absolute; left: 320px; top: 64px;" type="text" placeholder="holstein + girolando" class="inputs" >
+          <br>  
+          
+
+          <input name="tb_precio" id="tb_precio" type="text" placeholder="$ Precio" class="inputs" required><br>
+          <input name="tb_residencia" id="tb_residencia" type="text" placeholder="Residencia" class="inputs" required>
+
+          <h3>| cantidad</h3>
+          <input name="tb_hembras" id="tb_hembras" type="number" placeholder="Hembras" class="inputs" min="0" max="10" required>
+          <input name="tb_machos" id="tb_machos" type="number" placeholder="Machos" class="inputs" min="0" max="10" required>
+            
+          <h3> Peso Prom</h3>
+          <input name="tb_peso" id="tb_peso" type="text" placeholder="000 K" class="inputs" required>
+        
+          <h3>Edad</h3>
+          <input name="tb_edad" id="tb_edad" type="text" placeholder="meses" class="inputs" required>
+          <button name="Bagregar" class="inputs" id="Bagregar" onclick="agregarDatos()"> Agregar </button>
+          <button name="Bcancelar" class="inputs" id="Bcancelar" onclick="addDelete()"> Cancelar </button>
+
+          <div style="position: absolute; right: 10px; top: 10px; padding: 0px; border-bottom: 3px solid rgb(92, 119, 89); width: 225px;"> 
+            <!--Depositar URL-->
+            <input name="tb_IMG" id="tb_IMG" type="text" placeholder="Deposite URL de la imagen" class="inputs">
+            <br>
+            <input name="tb_VID" id="tb_VID" type="text" placeholder="Deposite URL del video" class="inputs">
+          </div>
+
+        </form>
+      </fieldset>
+    </section>
+
+    <section class="add" id="addProductoA">
+      <br>
+      <fieldset style="width: 100%; height: 100%; background-color: white;">
+        <center>
+          <h1 style="font-size: 30px; color: #3f3b3b">Productos Agricolas</h1>
+        </center>
+
+        <form id="formularioPro">
+          <select id="" class="inputs" required>
+            <option disabled selected >- Poducto Agricola -</option>
+            <option value="">Tomate</option>
+            <option value="">Cafe</option>
+            <option value="">Papa</option>
+            <option value="">Aguacate</option>
+            <option value="">Guanabana</option>
+          </select>
+          <br>
+          <h3>| Datos</h3>
+          <input type="text" placeholder="Cosechado en" class="inputs" required><br>
+          <input type="text" placeholder="$ Precio X Kilo" class="inputs" required>
+          <br>
+          <br>
+          <select name="" id="" class="inputs" required>
+            <option disabled selected>- Garantia -</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+
+          <br>
+          <h3>Descripción</h3>
+          <textarea required  class="inputs" name="" id=""></textarea>
+
+          <button class="inputs" id="Bagregar"> Agregar </button>
+          <button class="inputs" id="Bcancelar" onclick="addDelete()"> Cancelar </button>
+
+          <div style="position: absolute; right: 10px; top: 10px; padding: 0px; border-bottom: 3px solid rgb(92, 119, 89); width: 225px;"> 
+            <!--Depositar URL-->
+            <input type="text" placeholder="Deposite URL de la imagen" class="inputs">
+            <br>
+            <input type="text" placeholder="Deposite URL del video" class="inputs">
+          </div>
+        </form>
+
+      </fieldset>
+    </section>
+
+    <script src="Main/dataEntry.js"></script>
+  </body>
+</html>
