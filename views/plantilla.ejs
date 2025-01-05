@@ -1,0 +1,15 @@
+<% lotes.forEach(lote => { %>
+    <div class="lotes">
+      <center>
+       <img class="imgL" src="<%= lote.tb_IMG %>" alt="">
+       <br>
+       <strong><h3># Lote <%= lote.id %></h3></strong>
+       <p>$<%= lote.tb_precio %></p>
+       <br> 
+       <p>cabezas: <%= lote.tb_hembras + lote.tb_machos %></p>
+      </center>
+      <button class="ver" style="height: 20px; width: 100px; position: absolute; left: 28%; top: 85%; cursor: pointer;">
+      VER
+      </button>
+   </div>
+<% }); %>
