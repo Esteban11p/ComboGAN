@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Bahnschrift Condensed;
+}
+
+body{
+    background-image: url("https://tse2.mm.bing.net/th?id=OIP.TwQuTXVwmm38oFD9GNwYUAHaFj&pid=Api&P=0&h=180");
+}
+
+.add{
+    min-width: 60%;
+    max-width: 60%;
+    height: 465px;
+    margin: 33px auto;
+   margin-top: 125px;
+    border-radius: 20px;
+    border: 0px solid #222;
+    background-color: white;
+    text-align: center;
+    line-height: 132px;
+    display: block;
+}
+
+
+.ganado, .Agricolas {
+    width: 35%;
+    height: 235px;
+    border: 1px solid #D2D2D2;
+    display: inline-block;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(243, 238, 238);
+}
+
+.ganado{
+    background-image: url('https://media.istockphoto.com/id/917324818/es/foto/vaca-est%C3%A1-en-una-granja-en-el-campo.jpg?s=612x612&w=0&k=20&c=omW_eC6ubrbcmDq4PwFicjLITsTP03UnipqsmBRM1sU=');
+}
+
+.Agricolas{
+    background-image: url('https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.ganado:hover, .Agricolas:hover {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+#addGanado, #addProductoA{
+    text-align: left;
+    margin-left: 250px;
+    border: 0px solid black;
+    display: none;
+    line-height: 35px;
+    border: 0px solid black;
+    position: relative;
+}
+
+#addGanado fieldset, #addProductoA fieldset{
+    padding: 10px;
+    min-width: 100%;
+}
+
+#addGanado .inputs{
+    width: 200px;
+    padding: 10px;
+    margin: 4px;
+    margin-left: 0px;
+    font-size: 18px;
+}
+
+#Bagregar{
+    background-color: rgb(60, 133, 60);
+    color: greenyellow;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+}
+
+#Bagregar:hover{
+    background-color: rgb(16, 56, 16);
+}
+
+#Bcancelar{
+    background-color: rgb(145, 48, 48);
+    color: rgb(243, 44, 44);
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+#Bcancelar:hover{
+    background-color: rgb(97, 26, 13);
+}
+
+
+#formularioGan{
+    display: block;
+}
+
+/* Productos Agricolas */
+
+#addProductoA .inputs{
+    width: 200px;
+    padding: 10px;
+    margin: 4px;
+    margin-left: 0px;
+    font-size: 18px;
+}

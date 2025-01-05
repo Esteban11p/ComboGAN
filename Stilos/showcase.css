@@ -1,0 +1,41 @@
+.showcase{
+    margin-top: 20px;
+    border: 0px solid black;
+    height: 1300px;
+    max-width: 100%;
+    padding-top: 100px;
+    background-image: url('https://tse2.mm.bing.net/th?id=OIP.TwQuTXVwmm38oFD9GNwYUAHaFj&pid=Api&P=0&h=180');
+}
+
+.lotes{
+    border: 1px solid white ;
+    border-radius: 20px;
+    height: 374px;
+    width: 96%;
+    background-color: white ;
+    text-align: left;
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 5px rgba(95, 139, 132, 0.452); 
+    margin-bottom: 45px;
+}
+
+
+.infoL{
+    flex-grow: 1; /* Permite que el contenedor de texto crezca para ocupar el espacio restante */
+    padding: 40px;
+    color: black;
+    font-size: 20px;
+}
+
+.lotes video{
+    border: 0px solid rgb(214, 200, 200);
+    background-color: black;
+    margin: 15px;
+    float: right;
+    margin-top: 18px;
+    height:"290px"; 
+    width:"500px";
+}
+
+
